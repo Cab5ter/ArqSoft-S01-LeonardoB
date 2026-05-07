@@ -1,0 +1,20 @@
+@model Catalogo.Models.Item
+
+@{
+    ViewData["Title"] = "Detalle - " + Model.Titulo;
+}
+
+<h1>@Model.Titulo</h1>
+
+<div class="card" style="padding: 20px; border: 1px solid #444; border-radius: 8px;">
+    <p><strong>Género:</strong> @Model.Genero</p>
+    <p><strong>Consola:</strong> @Model.Consola</p>
+    <p><strong>Año:</strong> @Model.Ano</p>
+    <hr />
+    <p><strong>Descripción:</strong></p>
+    <p>@Model.Descripcion</p>
+</div>
+
+<br />
+
+<a asp-action="Index" class="btn btn-secondary">← Volver al Catálogo</a>

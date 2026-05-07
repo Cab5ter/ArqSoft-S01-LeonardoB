@@ -1,0 +1,37 @@
+@model List<Catalogo.Models.Item>
+
+@{
+    ViewData["Title"] = "Mi Catálogo";
+}
+
+<h1>Mi Catálogo</h1>
+
+<div>
+    <a asp-action="Index">Todos</a>
+    @if (ViewBag.Generos != null)
+    {
+        @foreach (var gen in ViewBag.Generos as List<string>)
+        {
+            <span> | </span>
+            <a asp-action="Index" asp-route-genero="@gen">@gen</a>
+        }
+    }
+</div>
+
+<hr />
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <strong>@item.Titulo</strong> -- @item.Genero (@item.Ano)
+            <br />
+            <a asp-action="Detalle" asp-route-id="@item.Id">Ver detalle</a>
+        </li>
+        <br />
+    }
+</ul>
+
+<hr />
+
+<a asp-action="Agregar" class="btn btn-primary">+ Agregar Videojuego</a>

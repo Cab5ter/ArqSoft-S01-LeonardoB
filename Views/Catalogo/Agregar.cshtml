@@ -1,0 +1,39 @@
+@model Catalogo.Models.Item
+
+@{
+    ViewData["Title"] = "Agregar Videojuego";
+}
+
+<h1>Agregar nuevo videojuego</h1>
+
+<form asp-action="Agregar" method="post">
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label>Título</label>
+        <input asp-for="Titulo" class="form-control" />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label>Género</label>
+        <input asp-for="Genero" class="form-control" />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label>Consola</label>
+        <input asp-for="Consola" class="form-control" />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label>Año</label>
+        <input asp-for="Ano" type="number" class="form-control" />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label>Descripción</label>
+        <textarea asp-for="Descripcion" class="form-control" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar Videojuego</button>
+</form>
+
+<hr />
+<a asp-action="Index" class="btn btn-link">← Cancelar y volver</a>
