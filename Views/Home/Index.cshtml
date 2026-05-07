@@ -1,8 +1,51 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="hero-banner" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); border-radius: 12px; padding: 60px 40px; text-align: center; margin-bottom: 40px;">
+    <h1 style="color: #e94560; font-size: 3rem; font-weight: bold;">
+        <span class="icono-animado">🎮</span> GameRent
+    </h1>
+    <p style="color: #a8a8b3; font-size: 1.2rem; margin-top: 10px;">Sistema de renta de videojuegos</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4 card-animada">
+        <div class="card h-100 text-white" style="background-color: #1a1a2e; border: 1px solid #e94560; border-radius: 12px;">
+            <div class="card-body text-center p-4">
+                <div class="icono-animado" style="font-size: 3rem;">🕹️</div>
+                <h4 class="card-title mt-3" style="color: #e94560;">Videojuegos</h4>
+                <p class="card-text" style="color: #a8a8b3;">Consulta y administra el catálogo de videojuegos disponibles para rentar.</p>
+                <a asp-controller="Catalogo" asp-action="Index" class="btn mt-2" style="background-color: #e94560; color: white; border-radius: 8px;">
+                    Ver catálogo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 card-animada">
+        <div class="card h-100 text-white" style="background-color: #1a1a2e; border: 1px solid #4fc3f7; border-radius: 12px;">
+            <div class="card-body text-center p-4">
+                <div class="icono-animado" style="font-size: 3rem; animation-delay: 0.4s;">👤</div>
+                <h4 class="card-title mt-3" style="color: #4fc3f7;">Clientes</h4>
+                <p class="card-text" style="color: #a8a8b3;">Registra y consulta los clientes que rentan videojuegos en la tienda.</p>
+                <a asp-controller="Cliente" asp-action="Index" class="btn mt-2" style="background-color: #4fc3f7; color: #1a1a2e; border-radius: 8px;">
+                    Ver clientes
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 card-animada">
+        <div class="card h-100 text-white" style="background-color: #1a1a2e; border: 1px solid #66bb6a; border-radius: 12px;">
+            <div class="card-body text-center p-4">
+                <div class="icono-animado" style="font-size: 3rem; animation-delay: 0.8s;">📋</div>
+                <h4 class="card-title mt-3" style="color: #66bb6a;">Rentas</h4>
+                <p class="card-text" style="color: #a8a8b3;">Administra las rentas activas y el historial de devoluciones.</p>
+                <a asp-controller="Renta" asp-action="Index" class="btn mt-2" style="background-color: #66bb6a; color: #1a1a2e; border-radius: 8px;">
+                    Ver rentas
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
