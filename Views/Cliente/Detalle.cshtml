@@ -1,0 +1,16 @@
+@model Catalogo.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalle - " + Model.Nombre;
+}
+
+<h1>@Model.Nombre</h1>
+
+<div class="card" style="padding: 20px; border: 1px solid #444; border-radius: 8px;">
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Teléfono:</strong> @Model.Telefono</p>
+</div>
+
+<br />
+
+<a asp-action="Index" class="btn btn-secondary">← Volver a Clientes</a>
