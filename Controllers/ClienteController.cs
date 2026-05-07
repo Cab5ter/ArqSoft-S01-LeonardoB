@@ -5,7 +5,7 @@ namespace Catalogo.Controllers
 {
     public class ClienteController : Controller
     {
-        private static List<Cliente> _clientes = new List<Cliente>()
+        public static List<Cliente> _clientes = new List<Cliente>()
         {
             new Cliente { Id = 1, Nombre = "Juan Pérez", Email = "juan@email.com", Telefono = "555-1234" },
             new Cliente { Id = 2, Nombre = "María López", Email = "maria@email.com", Telefono = "555-5678" }

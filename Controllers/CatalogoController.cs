@@ -7,7 +7,7 @@ namespace Catalogo.Controllers
 {
     public class CatalogoController : Controller
     {
-        private static List<Item> _items = new List<Item>()
+        public static List<Item> _items = new List<Item>()
         {
             new Item {
                 Id = 1,

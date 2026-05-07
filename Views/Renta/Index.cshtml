@@ -1,0 +1,39 @@
+@model List<Catalogo.Models.Renta>
+
+@{
+    ViewData["Title"] = "Rentas";
+    var videojuegos = ViewBag.Videojuegos as List<Catalogo.Models.Item>;
+    var clientes = ViewBag.Clientes as List<Catalogo.Models.Cliente>;
+}
+
+<h1>Rentas Activas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Videojuego</th>
+            <th>Cliente</th>
+            <th>Fecha Renta</th>
+            <th>Fecha Devolución</th>
+            <th>Devuelta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var renta in Model)
+        {
+            var juego = videojuegos?.FirstOrDefault(v => v.Id == renta.VideojuegoId);
+            var cliente = clientes?.FirstOrDefault(c => c.Id == renta.ClienteId);
+            <tr>
+                <td>@(juego?.Titulo ?? "Desconocido")</td>
+                <td>@(cliente?.Nombre ?? "Desconocido")</td>
+                <td>@renta.FechaRenta.ToString("dd/MM/yyyy")</td>
+                <td>@renta.FechaDevolucion.ToString("dd/MM/yyyy")</td>
+                <td>@(renta.Devuelta ? "Sí" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+
+<a asp-action="Agregar" class="btn btn-primary">+ Nueva Renta</a>
