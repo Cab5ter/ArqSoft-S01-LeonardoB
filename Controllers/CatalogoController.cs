@@ -26,14 +26,41 @@ namespace Catalogo.Controllers
                 Consola = "PlayStation 2",
                 Descripcion = "Alucard explora el castillo de su padre para destruirlo."
             },
-            new Item 
-            { 
-                Id = 3, 
-                Titulo = "NieR: Automata", 
-                Genero = "Action RPG", 
-                Ano = 2017, 
-                Consola = "PS4/PC", 
-                Descripcion = "La batalla de los androides por el futuro de la humanidad." 
+            new Item
+            {
+                Id = 3,
+                Titulo = "NieR: Automata",
+                Genero = "Action RPG",
+                Ano = 2017,
+                Consola = "PS4/PC",
+                Descripcion = "La batalla de los androides por el futuro de la humanidad."
+            },
+            new Item
+            {
+                Id = 4,
+                Titulo = "The Legend of Zelda: Breath of the Wild",
+                Genero = "Action Adventure",
+                Ano = 2017,
+                Consola = "Nintendo Switch",
+                Descripcion = "Link despierta sin memoria y debe explorar Hyrule para derrotar a Calamity Ganon."
+            },
+            new Item
+            {
+                Id = 5,
+                Titulo = "Dark Souls III",
+                Genero = "Action RPG",
+                Ano = 2016,
+                Consola = "PS4/Xbox One/PC",
+                Descripcion = "Un caballero no muerto busca a los Señores de la Ceniza para retrasar el fin del fuego."
+            },
+            new Item
+            {
+                Id = 6,
+                Titulo = "Hades",
+                Genero = "Roguelike",
+                Ano = 2020,
+                Consola = "PC/Nintendo Switch",
+                Descripcion = "Zagreus, hijo del dios del inframundo, intenta escapar del reino de su padre."
             }
         };
         
