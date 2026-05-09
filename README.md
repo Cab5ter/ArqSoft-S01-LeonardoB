@@ -66,21 +66,3 @@ Catalogo/
 ```
 
 ---
-
-## Cómo ejecutar
-
-1. Asegúrate de tener instalado el [SDK de .NET 10](https://dotnet.microsoft.com/download).
-2. Clona el repositorio:
-   ```bash
-   git clone https://github.com/Cab5ter/ArqSoft-S01-LeonardoB.git
-   cd ArqSoft-S01-LeonardoB
-   ```
-3. Ejecuta la aplicación:
-   ```bash
-   dotnet run
-   ```
-4. Abre tu navegador en `http://localhost:5222`.
-
----
-
-© 2026 - GameRent
